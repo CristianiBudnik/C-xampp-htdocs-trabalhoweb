@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Gerador de Currículo</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Gerador de Currículo</h1>
+        <form action="gerar_curriculo.php" method="post">
+            <fieldset>
+                <legend>Dados Pessoais</legend>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone">
+            </fieldset>
+            
+            <fieldset>
+                <legend>Experiência Profissional</legend>
+                <div id="experiencias">
+                    <div class="experiencia">
+                        <label for="cargo1">Cargo:</label>
+                        <input type="text" id="cargo1" name="cargo[]">
+                        
+                        <label for="empresa1">Empresa:</label>
+                        <input type="text" id="empresa1" name="empresa[]">
+                        
+                        <label for="periodo1">Período:</label>
+                        <input type="text" id="periodo1" name="periodo[]">
+                    </div>
+                </div>
+                <button type="button" id="add-experiencia">Adicionar Experiência</button>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Formação Acadêmica</legend>
+                <div id="formacoes">
+                    <div class="formacao">
+                        <label for="curso1">Curso:</label>
+                        <input type="text" id="curso1" name="curso[]">
+                        
+                        <label for="instituicao1">Instituição:</label>
+                        <input type="text" id="instituicao1" name="instituicao[]">
+                        
+                        <label for="periodo_curso1">Período:</label>
+                        <input type="text" id="periodo_curso1" name="periodo_curso[]">
+                    </div>
+                </div>
+                <button type="button" id="add-formacao">Adicionar Formação</button>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Habilidades</legend>
+                <label for="habilidades">Descreva suas habilidades:</label><br>
+                <textarea id="habilidades" name="habilidades" rows="4"></textarea>
+            </fieldset>
+            
+            <input type="submit" value="Gerar Currículo">
+        </form>
+    </div>
+</body>
+</html>
